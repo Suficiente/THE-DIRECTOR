@@ -1,1 +1,30 @@
-
+let playerName = "플레이어";
+let money = 1000;
+let people = 120;
+let food = 35;
+let unrest = 8;
+let newsList = [
+    "시민들이 춤추다"
+];
+// DOM
+function updateStats() {
+    document.getElementById("player-name").textContent = playerName;
+    document.getElementById("money").textContent = money;
+    document.getElementById("people").textContent = people;
+    document.getElementById("food").textContent = food;
+    document.getElementById("unrest").textContent = unrest;
+}
+function updateNews() {
+    const rand = Math.floor(Math.random() * newsList.length);
+    document.getElementById("newsline").innerText = newsList[rand];
+}
+document.addEventListener("DOMContentLoaded", () => {
+    updateStats();
+    updateNews();
+    document.querySelectorAll('.button').forEach(btn => {
+        btn.addEventListener('click', e => {
+            const txt = e.target.innerText;
+            if (txt === "도시 경영") {
+                alert(`돈: $${money}\n 인구: ${people}\n 식량: ${food}일치\n 불만도: ${unrest}%`);
+            } else if (txt === "연구") {
+                alert(" 연구 중... (아직 개발 중)");
