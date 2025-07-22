@@ -1,0 +1,64 @@
+#map-container {
+
+  width: 600px;
+
+  height: 400px;
+
+  overflow: scroll;
+
+  border: 2px solid white;
+
+  margin: 0 auto;
+
+  position: relative;
+
+}
+
+
+
+#map {
+
+  width: 1000px;
+
+  height: 800px;
+
+  position: relative;
+
+}
+
+
+
+#map img {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+HTML(그냥 패세지에)
+
+<div id="map-container">
+
+  <div id="map">
+
+    <img src="지도 사진 다이렉트 링크" alt="지도" />
+
+  </div>
+
+</div>
+
+
+
