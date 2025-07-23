@@ -1,6 +1,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Interface</title>
     <link rel="stylesheet" href="style.css"> 
     <style>
@@ -16,7 +19,6 @@
 <body>
     <div id="profile" class="box">
     <img id="profile-image" src="https://i.ibb.co/cB15BSp/802e6929b9e51ccc76a8a30820fefe13322a09a6c7836c97d3e56da305eec961.webp" alt="프로필 사진">
-
 <p><strong><span style="font-size:18px;">이름: <span id="player-name">플레이어</span></span></strong></p> 
 <img src="https://i.ibb.co/bqhqnkz/908be68e606e45b9f89823ac6bf1af03.png" class="icon-small"> 돈: $<span id="money">0</span><br>
 <img src="https://i.ibb.co/LX87ZmKH/02254cc6866c6c987ea07842838265a2.png" class="icon-small"> 인구: <span id="people">0</span> 명<br>
@@ -35,16 +37,3 @@
 </div>
 <div id="news">
 
-
-    <p id="newsline">뉴스 로딩 중...</p>
-    
-
-
-</div>
-<div id="controls">
-    <div class="button">도시 경영</div>
-    <div class="button">연구</div>
-    <div class="button">탐사</div>
-</div>
-<script src="script.js"></script>
-</body>
