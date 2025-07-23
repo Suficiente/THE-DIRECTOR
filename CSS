@@ -1,117 +1,140 @@
-background: #2a2a2a;
-font-size: 10px;
-line-height: 1.5;
-colOr: #£0£0£O ;
-border-radius: 4px;
+body, html {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  font-family: 'Press Start 2P', sans-serif;
+  margin: 0; padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#profile {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  width: 180px;
+  border: 1px solid #fff; /* �뉗� �섏� �뚮몢由� */
+  padding: 8px;
+  background: #2a2a2a;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #f0f0f0; /* �ㅽ� 怨좎묠: colOr -> color, #짙0짙0짙O -> #f0f0f0 */
+  border-radius: 4px;
 }
 
 .icon-small {
-width: 25px;
-height: 25px;
-vertical-align: middle;
-margin-right: 4px;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 4px;
 }
-
-/* 뉴스 박스 /
+    
+/* �댁뒪 諛뺤뒪 */
 #news {
-position: absolute;
-left: 60px;
-bottom: 70px;
-width: 180px;
-border: 1px solid #888;
-padding: 7px;
-background: #2a2a2a;
-font-size: 10px;
-line-height: 1.4;
-max-height: 150px;
-overflow-y: auto;
-color: #f0f0f0;
-border-radius: 4px;
+  position: absolute;
+  left: 60px;
+  bottom: 70px;
+  width: 180px;
+  border: 1px solid #888;
+  padding: 7px;
+  background: #2a2a2a url('https://i.ibb.co/rG4cN3Lj/734-20250618214305.png') no-repeat center center;
+  background-size: cover;
+  font-size: 10px;
+  line-height: 1.4;
+  max-height: 190px;
+  overflow-y: auto;
+  color: #f0f0f0;
+  border-radius: 4px;
 }
-/ 버튼 세트 /
+/* 踰꾪듉 �명듃 */
 #controls {
-position: absolute;
-left: 50px;
-bottom: 20px;
-display: flex;
-gap: 10px;
-max-width: calc(100vw - 200px);
-overflow-x: auto;
+  position: absolute;
+  left: 50px;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  max-width: calc(100vw - 200px);
+  overflow-x: auto;
 }
-/ 버튼 스타일 /
+/* 踰꾪듉 �ㅽ��� */
 #controls .button {
-border: 1px solid #aaa;
-background: #3b3b3b;
-padding: 6px 14px;
-font-size: 10px;
-cursor: pointer;
-color: #f0f0f0;
-white-space: nowrap;
-border-radius: 2px;
-transition: background 0.2s ease;
+  border: 1px solid #aaa;
+  background: #3b3b3b;
+  padding: 6px 14px;
+  font-size: 10px;
+  cursor: pointer;
+  color: #f0f0f0;
+  white-space: nowrap;
+  border-radius: 2px;
+  transition: background 0.2s ease;
 }
 #controls .button:hover {
-background: #555;
+  background: #555;
 }
-/ 비서 박스 /
-#npc-wrapper {
-position: absolute;
-bottom: 10px;
-right: 10px;
-width: 180px;
-border: 1px solid #888;
-background: #2a2a2a;
-padding: 0px;
-font-size: 12px;
-color: #f0f0f0;
-text-align: center;
-border-radius: 4px;
-}
-#npc-image {
-width: 90%;
-height: auto;
-margin-bottom: 0px;
-display: block;
-}
-/ 아이콘 */
+
+/* �꾩씠肄� */
 #icon1, #icon2 {
-display: none;
+  display: none;
 }
 
 body {
-background: url("https://i.ibb.co/d03m2v5r/ea0ec94ef099f8b6b8e2541f2e23dbee.png") no-repeat center center fixed;
-background-size: cover;
-margin: 0;
-padding: 0;
+  background: url("https://i.ibb.co/vCrvTths/20250618-142107.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 tw-story {
-background: transparent;
+  background: transparent;
 }
+
+/* 鍮꾩꽌 諛뺤뒪 */
+#npc-wrapper {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 180px;
+  border: 1px solid #fff; /* �섏� �뚮몢由� */
+  background: #2a2a2a;
+  padding: 0;
+  font-size: 12px;
+  color: #f0f0f0;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NPC �대�吏� */
+#npc-image {
+  width: 90%;
+  height: auto;
+  margin: 5px 0 0 0; /* �꾩뿏 �쎄컙留� */
+  display: block;
+}
+
+/* ���ъ갹 */
 #npc-dialogue {
-width: 80%;
-max-width: 200px; /* Increased max-width to ensure text fits /
-margin: 10px auto;
-padding: 10px;
-border: 2px solid #ccc; / Added a visible border for clarity /
-border-radius: 0px;    / Slightly rounded corners /
-background-color: #f9f9f9;
-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-min-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center; / Center text horizontally /
-text-align: center; / Fallback for text alignment */
+  width: 85%;
+  margin: 5px 0 2px 0; /* �꾨옒 �щ갚 理쒖냼��!! */
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #fff; /* �섏� 諛곌꼍!! */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  color: #333; /* �대몢�� 湲��� */
 }
 
+/* ���댄븨 �띿뒪�� */
 #typing-text {
-font-size: 1.2em;
-color: #333;
-white-space: pre-wrap;
-overflow: hidden;
-border-right: 0.00em solid orange;
-animation: blink-caret 0.75s step-end infinite;
+  font-size: 0.95em; /* �쎄컙 �묎쾶 */
+  color: #333;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-right: 0.00em solid orange;
+  animation: blink-caret 0.75s step-end infinite;
 }
-border-color: transparent }
-
-
