@@ -1,0 +1,53 @@
+/* Javascript는 여기서만 작성할 것 */
+
+:: StoryScript [script]
+
+// 게임 데이터
+// 게임의 상태를 저장하는 객체
+const gameData = {
+    player: "관리자",
+    money: 1000,
+    population: 120,
+    food: 82,
+    unrest: 20
+};
+
+
+// 임시 newsList
+let newsList = [
+    {
+        title: "서부 무기고가 습격당함!",
+        content: "시민 불안 급증, 시민들은 약탈로 인해 극심한 빈곤에 시달린다. 한편 도심 외곽에선 레지스탕스가 활동한다는 소문이 돌고 있다.",
+        image: "https://i.ibb.co/bgSq44Rd/728-20250618000251.png"
+    }
+];
+
+
+// DOM 요소 가져오기
+function updateStats() {
+    document.getElementById("player-name").textContent = playerName;
+    document.getElementById("money").textContent = money;
+    document.getElementById("people").textContent = people;
+    document.getElementById("food").textContent = food;
+    document.getElementById("unrest").textContent = unrest;
+}
+
+
+// 뉴스 업데이트 함수
+function updateNews() {
+    const rand = Math.floor(Math.random() * newsList.length);
+    document.getElementById("newsline").innerText = newsList[rand];
+}
+
+
+// 이벤트 기능?
+document.addEventListener("DOMContentLoaded", () => {
+    updateStats();
+    updateNews();
+    document.querySelectorAll('.button').forEach(btn => {
+        btn.addEventListener('click', e => {
+            const txt = e.target.innerText;
+            if (txt === "도시 경영") {
+                alert(`돈: $${money}\n 인구: ${people}\n 식량: ${food}일치\n 불만도: ${unrest}%`);
+            } else if (txt === "연구") {
+                alert(" 연구 중... (아직 개발 중)");

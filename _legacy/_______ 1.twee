@@ -1,0 +1,194 @@
+:: StoryTitle
+❗️진짜공프임 1
+
+
+:: StoryData
+{
+  "ifid": "ee7903fe-b4ca-4d1d-9b3a-eef368e6751f",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "zoom": 1
+}
+
+
+:: Untitled Passage {"position":"550,250","size":"100,100"}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Interface</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        #profile-image {
+            width: 80px;
+            height: 50
+            border-radius: 0px;
+            display: block;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="profile" class="box">
+    <img id="profile-image" src="https://i.ibb.co/cB15BSp/802e6929b9e51ccc76a8a30820fefe13322a09a6c7836c97d3e56da305eec961.webp" alt="프로필 사진">
+<p>️<strong><span style="font-size:18px;">이름: 플레이어</span></strong></p> 
+    <img src="https://i.ibb.co/bqhqnkz/908be68e606e45b9f89823ac6bf1af03.png" class="icon-small"> 돈: $1234<br>
+    <img src="https://i.ibb.co/LX87ZmKH/02254cc6866c6c987ea07842838265a2.png" class="icon-small"> 인구: 203명<br>
+    <img src="https://i.ibb.co/7N2BjTCB/a0112134d2b4a8bb1f529b36e51ed4ed.png" class="icon-small"> 식량: 82일치<br>
+    <img src="https://i.ibb.co/5JJYJXy/51967ccf7d90f5ed7c50a60c2dbfc074.png" class="icon-small"> 불만도: 20%
+</div>
+    <div id="icon1" class="map-icon">!</div>
+    <div id="icon2" class="map-icon">?</div>
+    <div id="npc-wrapper">
+        <img id="npc-image" src="https://i.ibb.co/8LVH0sCP/76885f3bac442019d39d4d135c2bc9eec005e0eb86df65923dd9daef94816c85.webp" alt="In-game image of a pickaxe (now used as the NPC image)">
+        <div id="npc-dialogue">
+    <div id="typing-text">
+    <img src="https://i.ibb.co/8gHF47V4/729-20250618102431.png" class="icon-small">
+님아 고기는 구워먹으시고 나무부터 캐세요...
+    </div>
+</div>
+    </div>
+    <div id="news">
+ <img src="https://i.ibb.co/bgSq44Rd/728-20250618000251.png" alt="서부 무기고가 습격당함! 시민 불안 급증" style="width: 150px; height: auto;">
+        <p>서부 무기고가 습격당함! 시민 불안 급증, 시민들은 약탈로 인해 극심한 빈곤에 시달린다. 한편 도심 외곽에선 레지스탕스가 활동한다는 소문이 돌고 있다.</p>
+    </div>
+    <div id="controls">
+        <div class="button">도시 경영</div>
+        <div class="button">연구</div>
+        <div class="button">탐사</div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+
+
+:: StoryStylesheet [stylesheet]
+body, html {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  font-family: 'Press Start 2P', sans-serif;
+  margin: 0; padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#profile {
+position: absolute;
+top: 10px;
+left: 60px;
+width: 150px;
+border: lpx solid #888;
+padding: 8px;
+background: #2a2a2a;
+font-size: 10px;
+line-height: 1.5;
+colOr: #£0£0£O ;
+border-radius: 4px;
+  }
+
+.icon-small {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+    
+/* 뉴스 박스 */
+#news {
+  position: absolute;
+  left: 60px;
+  bottom: 70px;
+  width: 180px;
+  border: 1px solid #888;
+  padding: 7px;
+  background: #2a2a2a;
+  font-size: 10px;
+  line-height: 1.4;
+  max-height: 150px;
+  overflow-y: auto;
+  color: #f0f0f0;
+  border-radius: 4px;
+}
+/* 버튼 세트 */
+#controls {
+  position: absolute;
+  left: 50px;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  max-width: calc(100vw - 200px);
+  overflow-x: auto;
+}
+/* 버튼 스타일 */
+#controls .button {
+  border: 1px solid #aaa;
+  background: #3b3b3b;
+  padding: 6px 14px;
+  font-size: 10px;
+  cursor: pointer;
+  color: #f0f0f0;
+  white-space: nowrap;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+#controls .button:hover {
+  background: #555;
+}
+/* 비서 박스 */
+#npc-wrapper {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 180px;
+  border: 1px solid #888;
+  background: #2a2a2a;
+  padding: 0px;
+  font-size: 12px;
+  color: #f0f0f0;
+  text-align: center;
+  border-radius: 4px;
+}
+#npc-image {
+  width: 90%;
+  height: auto;
+  margin-bottom: 0px;
+  display: block;
+}
+/* 아이콘 */
+#icon1, #icon2 {
+  display: none;
+}
+
+body {
+  background: url("https://i.ibb.co/vCrvTths/20250618-142107.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+tw-story {
+  background: transparent;
+}
+#npc-dialogue {
+  width: 80%;
+  max-width: 200px; /* Increased max-width to ensure text fits */
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid #ccc; /* Added a visible border for clarity */
+  border-radius: 0px;    /* Slightly rounded corners */
+  background-color: #f9f9f9;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text horizontally */
+  text-align: center; /* Fallback for text alignment */
+}
+
+#typing-text {
+  font-size: 1.2em;
+  color: #333;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-right: 0.00em solid orange;
+  animation: blink-caret 0.75s step-end infinite;
+}
+ border-color: transparent }

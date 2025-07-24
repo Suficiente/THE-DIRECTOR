@@ -1,0 +1,96 @@
+:: StoryTitle
+❗️진짜공프임 1
+
+
+:: StoryData
+{
+  "ifid": "ee7903fe-b4ca-4d1d-9b3a-eef368e6751f",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "zoom": 1,
+  "creator": "",
+  "creator-version": "0.1.0",
+  "tasks": [
+    {
+      "label": "Tweego",
+      "type": "shell",
+      "isBackground": true,
+      "command": "tweego -w -o index.html src",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+
+
+:: Start {"position":"100,100","size":"100,100"}
+{
+  "name": "start",
+  "type": "passage",
+  "tags": [],
+  "text": "Welcome to the start of your story! Click the link below to begin.",
+  "links": [
+    {
+      "linkText": "Go to main passage",
+      "passageName": "main"
+    }
+  ]
+}
+
+
+:: main {"position":"550,250","size":"100,100"}
+{
+  "name": "main",
+  "type": "passage",
+  "tags": [],
+  "text": "Welcome to the main passage of your story. You can start writing your narrative here.",
+  "links": []
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Interface</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        #profile-image {
+            width: 80px;
+            height: 50
+            border-radius: 0px;
+            display: block;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="profile" class="box">
+    <img id="profile-image" src="https://i.ibb.co/cB15BSp/802e6929b9e51ccc76a8a30820fefe13322a09a6c7836c97d3e56da305eec961.webp" alt="프로필 사진">
+<p>️<strong><span style="font-size:18px;">이름: 플레이어</span></strong></p> 
+    <img src="https://i.ibb.co/bqhqnkz/908be68e606e45b9f89823ac6bf1af03.png" class="icon-small"> 돈: $1234<br>
+    <img src="https://i.ibb.co/LX87ZmKH/02254cc6866c6c987ea07842838265a2.png" class="icon-small"> 인구: 203명<br>
+    <img src="https://i.ibb.co/7N2BjTCB/a0112134d2b4a8bb1f529b36e51ed4ed.png" class="icon-small"> 식량: 82일치<br>
+    <img src="https://i.ibb.co/5JJYJXy/51967ccf7d90f5ed7c50a60c2dbfc074.png" class="icon-small"> 불만도: 20%
+</div>
+    <div id="icon1" class="map-icon">!</div>
+    <div id="icon2" class="map-icon">?</div>
+    <div id="npc-wrapper">
+        <img id="npc-image" src="https://i.ibb.co/8LVH0sCP/76885f3bac442019d39d4d135c2bc9eec005e0eb86df65923dd9daef94816c85.webp" alt="In-game image of a pickaxe (now used as the NPC image)">
+        <div id="npc-dialogue">
+    <div id="typing-text">
+    <img src="https://i.ibb.co/8gHF47V4/729-20250618102431.png" class="icon-small">
+님아 고기는 구워먹으시고 나무부터 캐세요...
+    </div>
+</div>
+    </div>
+    <div id="news">
+ <img src="https://i.ibb.co/bgSq44Rd/728-20250618000251.png" alt="서부 무기고가 습격당함! 시민 불안 급증" style="width: 150px; height: auto;">
+        <p>서부 무기고가 습격당함! 시민 불안 급증, 시민들은 약탈로 인해 극심한 빈곤에 시달린다. 한편 도심 외곽에선 레지스탕스가 활동한다는 소문이 돌고 있다.</p>
+    </div>
+    <div id="controls">
+        <div class="button">도시 경영</div>
+        <div class="button">연구</div>
+        <div class="button">탐사</div>
+    </div>
+    <script src="script.js"></script> 
+</body>
